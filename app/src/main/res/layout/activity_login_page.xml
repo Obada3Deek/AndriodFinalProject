@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:transitionName="logo_image"
+        android:src="@drawable/bzucar" />
+
+    <TextView
+        android:id="@+id/welcomeMessageLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello! , Welcome back"
+        android:textSize="40sp"
+        android:transitionName="logo_text"
+        android:fontFamily="monospace"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:hint="Email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            app:passwordToggleEnabled="true"
+            android:hint="Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            android:background="#00000000"
+            android:layout_gravity="right"
+            android:id="@+id/btnForget"
+            android:elevation="0dp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogin"
+            android:text="Login"
+            android:textColor="#fff"
+            android:background="#000"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNewUser"
+            android:text="New User? SIGN UP"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#000"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

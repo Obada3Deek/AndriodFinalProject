@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Trip_PlanningProject</string>
+    <string name="trip_description_placeholder">Hello World\n</string>
+    <string name="trip_image_description">Obada\n</string>
+    <string name="Description_Roma">"Explore ancient ruins, stunning architecture, and vibrant culture in the heart of Italy."</string>
+    <string name="Description_Giza">"Discover the majestic pyramids and rich history of Egypt's ancient civilization."</string>
+    <string name="Description_Madrid">"Experience lively plazas, world-class museums, and delicious Spanish cuisine."</string>
+    <string name="Description_Paris">"Stroll through romantic streets, visit iconic landmarks, and savor exquisite French pastries."</string>
+    <string name="StartButton">Start-></string>
+    <string name="MainTitle">Trip Planner and Management</string>
+    <string name="MainDes">Plan and manage your trips easily with our app. Track your itineraries, expenses, and enjoy your travel.</string>
+    <string name="welcomeMessageSplash">Welcome to our Car Rental app! </string>
+</resources>
