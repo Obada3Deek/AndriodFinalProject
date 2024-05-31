@@ -63,17 +63,35 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textStyle="bold"
+            android:layout_marginRight="85dp"
+            android:textColor="#000"/>
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Forget Password?"
+            android:textStyle="bold"
             android:background="#00000000"
             android:layout_gravity="right"
             android:id="@+id/btnForget"
             android:elevation="0dp"
             android:textColor="#000"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            />
+
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
