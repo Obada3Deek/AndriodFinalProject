@@ -43,4 +43,14 @@ public class SignUpClient extends AppCompatActivity {
             }
         });
     }
+
+    public void registerUserValidation(View view){
+        String firstName;
+        String lastName;
+        String email;
+        String phoneNumber;
+        String password;
+        String gender;
+
+    }
 }

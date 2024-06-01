@@ -32,5 +32,13 @@ public class LoginPage extends AppCompatActivity {
                 startActivity(SignUpIntent);
             }
         });
+
+        btnLoginProcess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextAct = new Intent(LoginPage.this , UserProfile.class);
+                startActivity(nextAct);
+            }
+        });
     }
 }
