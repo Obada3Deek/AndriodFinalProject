@@ -16,7 +16,6 @@ public class SignUpClient extends AppCompatActivity {
     private Animation topAnim , buttomAnim;
     private ImageView logo;
     private TextView welcometxt , Destxt;
-
     private Button btnLogin;
 
     @Override
