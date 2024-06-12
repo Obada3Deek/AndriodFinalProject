@@ -32,16 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         images = new ArrayList<>();
-        images.add(R.drawable.giza);
-        images.add(R.drawable.madrid);
-        images.add(R.drawable.roma);
-        images.add(R.drawable.paris);
+        images.add(R.drawable.skoda);
+        images.add(R.drawable.mercedes);
+        images.add(R.drawable.bmw);
+        images.add(R.drawable.range);
 
         descriptions = new ArrayList<>();
-        descriptions.add("Discover the majestic pyramids and rich history of Egypt's ancient civilization.");
-        descriptions.add("Experience lively plazas, world-class museums, and delicious Spanish cuisine.");
-        descriptions.add("Explore ancient ruins, stunning architecture, and vibrant culture in the heart of Italy.");
-        descriptions.add("Stroll through romantic streets, visit iconic landmarks, and savor exquisite French pastries.");
+        descriptions.add("Skoda produces reliable and practical vehicles known for their affordability and efficiency.");
+        descriptions.add("Mercedes-Benz is known for its prestigious lineup of luxury cars and innovative technology.");
+        descriptions.add("BMW offers luxury vehicles with sleek designs and advanced technology.");
+        descriptions.add("Range Rover is synonymous with luxury SUVs renowned for their off-road capabilities.");
 
         textDescription = findViewById(R.id.textDescription);
         // Set initial description

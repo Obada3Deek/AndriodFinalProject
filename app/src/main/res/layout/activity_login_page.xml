@@ -100,8 +100,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
             android:text="Login"
-            android:textColor="#fff"
-            android:background="#000"/>
+            android:backgroundTint="@color/ButtonBackground"
+            android:textColor="#fff"/>
 
         <Button
             android:layout_width="match_parent"

@@ -6,6 +6,8 @@
     <color name="textButton">#2f3640</color>
     <color name="back">#ffda79</color>
     <color name="ColorCRESTIAL_GREEN">#33d9b2</color>
+    <color name="ButtonBackground">#007BFF</color>
+    <color name="ProfileBack">#c8d6e5</color>
 
 
 </resources>

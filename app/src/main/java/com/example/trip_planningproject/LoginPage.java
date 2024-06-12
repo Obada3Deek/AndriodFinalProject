@@ -2,11 +2,16 @@ package com.example.trip_planningproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,12 +36,14 @@ import java.util.Map;
 public class LoginPage extends AppCompatActivity {
 
     private ImageView logo;
-    private TextView welcome_message;
+    private Animation topAnim , buttomAnim;
+    private TextView welcome_message , test;
 
     private TextInputLayout emailInput , passwordInput;
     private TextInputEditText emailEditText , passwordEditText;
 
     private Button btnForget , btnLoginProcess , btnNewUser;
+    private CheckBox rememberMeCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +55,22 @@ public class LoginPage extends AppCompatActivity {
         emailInput = findViewById(R.id.email);
         passwordInput = findViewById(R.id.password);
         emailEditText = findViewById(R.id.emailEditText);
+        //test = findViewById(R.id.test111);
         passwordEditText = findViewById(R.id.passwordEditText);
+        rememberMeCheckBox = findViewById(R.id.checkBoxRememberMe);
         logo = findViewById(R.id.imageLogo);
         welcome_message = findViewById(R.id.welcomeMessageLogin);
+        SharedPreferences register = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String emailSH = register.getString("Email", "");
+        String passwordSH = register.getString("Password", "");
+       // test.setText("Email = "+emailSH+"\nPass ="+passwordSH);
+        topAnim = AnimationUtils.loadAnimation(this ,R.anim.top_animation);
+        buttomAnim = AnimationUtils.loadAnimation(this ,R.anim.buttom_animation);
+
+        logo.setAnimation(topAnim);
+        welcome_message.setAnimation(topAnim);
+        btnLoginProcess.setAnimation(buttomAnim);
+        btnNewUser.setAnimation(buttomAnim);
 
         btnNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,16 +86,47 @@ public class LoginPage extends AppCompatActivity {
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+                // Check if email or password fields are empty
+                boolean areFieldsEmpty = TextUtils.isEmpty(email) || TextUtils.isEmpty(password);
+                if (areFieldsEmpty) {
                     Toast.makeText(LoginPage.this, "All fields are required", Toast.LENGTH_SHORT).show();
-                } else {
-                    loginUser(email, password);
+                    return; // Exit the method if fields are empty
                 }
+
+// Check if email and password match the stored values
+                boolean isLoginValid = email.equals(emailSH) && password.equals(passwordSH);
+                if (!isLoginValid) {
+                    Toast.makeText(LoginPage.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+                    return; // Exit the method if login is invalid
+                }
+
+// Save "Remember Me" preference if checkbox is checked
+                if (rememberMeCheckBox.isChecked()) {
+                    SharedPreferences.Editor editor = register.edit();
+                    editor.putBoolean("rememberMe", true);
+                    editor.apply();
+                }
+
+// Start the MainActivity and finish the LoginPage activity
+                Intent intent = new Intent(LoginPage.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+
             }
+                    //  loginUser(email, password);
+
+
         });
     }
 
-    private void loginUser(String email, String password) {
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "WELCOME BACK", Toast.LENGTH_LONG).show();
+    }
+}
+
+   /*  private void loginUser(String email, String password) {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "http://10.0.2.2/carRental/login.php"; // Use 10.0.2.2 to access localhost from Android emulator
 
@@ -118,4 +169,6 @@ public class LoginPage extends AppCompatActivity {
 
         requestQueue.add(stringRequest);
     }
-}
+
+    */
+

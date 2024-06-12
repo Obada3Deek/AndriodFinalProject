@@ -4,4 +4,11 @@
 
     </style>
 
+
+    <style name="SecondaryButton">
+        <item name="android:background">@color/ColorCRESTIAL_GREEN</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
 </resources>

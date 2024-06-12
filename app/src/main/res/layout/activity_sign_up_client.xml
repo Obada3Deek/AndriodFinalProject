@@ -49,6 +49,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/firstNameEditText"
                 android:maxLines="1"
                 android:inputType="text"/>
 
@@ -66,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:id="@+id/lastNameEditText"
                 android:inputType="text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -139,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:id="@+id/phoneNumberEditText"
                 android:inputType="number"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -149,7 +152,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SIGN UP"
-        android:background="#000"
+        android:backgroundTint="@color/ButtonBackground"
         android:textColor="#fff"
         android:id="@+id/SIGNUPbtn"/>
 

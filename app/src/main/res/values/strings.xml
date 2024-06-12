@@ -10,4 +10,7 @@
     <string name="MainTitle">Trip Planner and Management</string>
     <string name="MainDes">Plan and manage your trips easily with our app. Track your itineraries, expenses, and enjoy your travel.</string>
     <string name="welcomeMessageSplash">Welcome to our Car Rental app! </string>
+    <string name="DES_CARRENTAL">Our car rental app provides convenient access to a diverse range of vehicles for short-term hire.</string>
+    <string name="TITLE">BZU TEAM CAR RENTAL</string>
+    <string name="DESCRIPTION_Image">Description for each image</string>
 </resources>

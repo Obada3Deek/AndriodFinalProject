@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@color/yellowColorOne"
+            android:background="@color/ProfileBack"
             android:padding="10dp">
 
             <ImageView
@@ -175,9 +175,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
                     android:drawableLeft="@drawable/person_man"
                     android:drawablePadding="10dp"
+                    android:maxLines="1"
                     android:text="Obada" />
 
 
@@ -211,9 +211,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
                     android:drawableLeft="@drawable/baseline_attach_email_24"
                     android:drawablePadding="10dp"
+                    android:maxLines="1"
                     android:text="obada_deek5@yahoo.com" />
 
 
@@ -229,9 +229,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
                     android:drawableLeft="@drawable/baseline_password_24"
                     android:drawablePadding="10dp"
+                    android:maxLines="1"
                     android:text="Abc@112233" />
 
 
@@ -247,9 +247,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
                     android:drawableLeft="@drawable/baseline_phone_forwarded_24"
                     android:drawablePadding="10dp"
+                    android:maxLines="1"
                     android:text="0596154352" />
 
 
@@ -259,10 +259,10 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/textButton"
+                android:layout_marginTop="5dp"
+                android:background="@color/ButtonBackground"
                 android:fontFamily="@font/peralta"
-                android:text="Update"
-                android:layout_marginTop="5dp"/>
+                android:text="Update" />
 
 
         </LinearLayout>
